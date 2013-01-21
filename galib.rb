@@ -8,6 +8,8 @@ class Galib < Formula
 
   def install
     mkdir "#{prefix}/lib"
+    system "make"
+    system "make test"
     system "make DESTDIR=#{prefix} install"
   end
 end
